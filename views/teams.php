@@ -5,5 +5,7 @@
             <p>Country: <?= $team['country']; ?></p>
             <!-- Affichez d'autres informations spécifiques à l'équipe ici -->
         </div>
+
+        
     <?php endforeach; ?>
 </section>

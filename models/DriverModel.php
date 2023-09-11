@@ -1,5 +1,5 @@
 <?php
-require_once './MyApp/Framework/Modele.php';
+require_once '../MyApp/Framework/Modele.php';
 
 class DriverModel {
     private $conn;

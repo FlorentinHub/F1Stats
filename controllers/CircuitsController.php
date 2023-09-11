@@ -1,6 +1,7 @@
 <?php
-require_once 'Framework/Controleur.php';
-require_once 'Modele/Billet.php';
+require_once './Framework/Controleur.php';
+require_once './models/CircuitModel.php';
+// require_once 'Modele/Billet.php';
 class CircuitsController {
     public function showCircuits() {
             if (file_exists(__DIR__ . '/../models/CircuitModel.php')) {

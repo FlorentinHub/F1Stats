@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php" class="LogoHome"><img src="../MyApp/URL1jpg.jpg" alt="Logo d'accueil"></a>
+        <img class="LogoHome" src="../MyApp/URL1jpg.jpg" alt="Logo d'accueil">
         <h1 class="HeaderTitle">Formula 1 Data</h1>
     </header>
     <nav>
@@ -24,7 +24,7 @@
     if (isset($_GET['section'])) {
         $section = $_GET['section'];
     } else {
-        $section = 'home'; // Chargez la section par défaut ici
+        $section = 'home';
     }
 
     switch ($section) {
