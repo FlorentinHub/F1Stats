@@ -55,11 +55,12 @@ class CircuitsController extends Controleur
             $circuit['last_race'] = $this->requete->getParametre('last_race');
             $circuit['races'] = $this->requete->getParametre('races');
             $this->circuit->setCircuit($circuit);
+            $this->rediriger('CircuitsController', 'index');
         }
     }
     
     public function formAjout()
     {
-        $this->genererVue(array());
+        $this->genererVue();
     }
 }
