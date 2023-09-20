@@ -41,6 +41,8 @@ abstract class Modele {
      */
     private static function getBdd() {
         if (self::$bdd === null) {
+            
+        // $this->conn = new mysqli("localhost", "root", "mysql", "FormulaOne2023");
             // Récupération des paramètres de configuration BD
             $dsn = Configuration::get("dsn");
             $login = Configuration::get("login");

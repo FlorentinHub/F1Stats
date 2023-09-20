@@ -15,9 +15,7 @@ section {
     display: flex;
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne lorsque l'espace est insuffisant */
     gap: 20px; /* Espacement entre les cartes */
-
   }
-
 .card {
  width: 290px;
  height: 104px;
@@ -74,4 +72,3 @@ section {
  transform: translate(-50%, 50%);
  opacity: 1;
 }
-

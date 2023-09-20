@@ -1,0 +1,20 @@
+.cardAdd{
+    display: block;
+    width: 1790px;
+   height: 104px;
+   border-radius: 20px;
+   background: #f5f5f5;
+   position: relative;
+   padding: 1.8rem;
+   border: 2px solid #c3c6ce;
+   transition: 0.5s ease-out;
+   overflow: visible;
+   color: black;
+   height: 100%;
+   gap: .5em;
+   place-content: center;
+  }
+a{
+    font-size: 1.5em;
+    font-weight: bold;
+}

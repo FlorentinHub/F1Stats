@@ -25,7 +25,7 @@ class Vue {
     public function __construct($action, $controleur = "") {
         // Détermination du nom du fichier vue à partir de l'action et du constructeur
         // La convention de nommage des fichiers vues est : Vue/<$controleur>/<$action>.php
-        $fichier = "Vue/";
+        $fichier = "views/";
         if ($controleur != "") {
             $fichier = $fichier . $controleur . "/";
         }
@@ -46,14 +46,15 @@ class Vue {
         $racineWeb = Configuration::get("racineWeb", "/");
         // Génération du gabarit commun utilisant la partie spécifique
         $donnees_gabarit = [
-            'titre' => $this->titre, 'contenu' => $contenu,
+            'titre' => $this->titre, 
+            'contenu' => $contenu,
             'racineWeb' => $racineWeb,
-            'message' => $donnees['message']
+            // 'message' => $donnees['message']
         ];
         // On ajoute l'utilisateur en session s'il y a lieu
         if (isset($donnees['utilisateur']))
             $donnees_gabarit['utilisateur'] = $donnees['utilisateur'];
-        $vue = $this->genererFichier('Vue/gabarit.php', $donnees_gabarit);
+        $vue = $this->genererFichier('views/gabarit.php', $donnees_gabarit);
         // Renvoi de la vue générée au navigateur
         echo $vue;
     }

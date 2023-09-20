@@ -32,6 +32,7 @@ class Routeur {
 
             $controleur->executerAction($action);
         } catch (Exception $e) {
+            var_dump($e);
             $this->gererErreur($e);
         }
     }
@@ -58,8 +59,8 @@ class Routeur {
         }
         // Création du nom du fichier du contrôleur
         // La convention de nommage des fichiers controleurs est : Controleur/Controleur<$controleur>.php
-        $classeControleur = "Controleur" . $controleur;
-        $fichierControleur = "Controleur/" . $classeControleur . ".php";
+        $classeControleur = $controleur;
+        $fichierControleur = "controllers/" . $classeControleur . ".php";
         if (file_exists($fichierControleur)) {
             // Instanciation du contrôleur adapté à la requête
             require($fichierControleur);

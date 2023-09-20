@@ -11,6 +11,7 @@ require_once 'Vue.php';
  * @author Baptiste Pesquet
  */
 abstract class Controleur {
+    
 
     /** Action à réaliser */
     private $action;
@@ -57,14 +58,16 @@ abstract class Controleur {
     protected function genererVue($donneesVue = array()) {
         // Détermination du nom du fichier vue à partir du nom du contrôleur actuel
         $classeControleur = get_class($this);
-        $controleur = str_replace("Controleur", "", $classeControleur);
+        $controleur = str_replace("Controller", "", $classeControleur);
         // Vérifier s'il y a un message à afficher
         $message = '';
-        if ($this->requete->getSession()->existeAttribut("message")) {
-            $message = $this->requete->getsession()->getAttribut("message");
-            $this->requete->getsession()->setAttribut("message", ''); // on affiche le message une seule fois 
-        }
+        //Sessions:
+        // if ($this->requete->getSession()->existeAttribut("")) {
+        //     $message = $this->requete->getsession()->getAttribut("message");
+        //     $this->requete->getsession()->setAttribut("message", ''); // on affiche le message une seule fois 
+        // }
         $donneesVue['message'] = $message;
+        
 
         // Instanciation et génération de la vue
         $vue = new Vue($this->action, $controleur);

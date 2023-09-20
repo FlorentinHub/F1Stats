@@ -1,4 +1,14 @@
 <?php
+
+/**
+ * Classe de gestion des paramètres de configuration
+ * 
+ * Inspirée du SimpleFramework de Frédéric Guillot
+ * (https://github.com/fguillot/simpleFramework)
+ *
+ * @version 1.0
+ * @author Baptiste Pesquet
+ */
 class Configuration {
 
     /** Tableau des paramètres de configuration */
@@ -20,6 +30,16 @@ class Configuration {
         return $valeur;
     }
 
+    // public static function getdsn() {
+    //     $dsn = 'dsn';
+    //     $valeurParDefaut='dsn';
+    //     if (isset(self::getParametres()[$dsn])) {
+    //         $valeur = self::getParametres()[$dsn];
+    //     } else {
+    //         $valeur = $valeurParDefaut;
+    //     }
+    //     return $valeur;
+    // }
     /**
      * Renvoie le tableau des paramètres en le chargeant au besoin depuis un fichier de configuration.
      * Les fichiers de configuration recherchés sont Config/dev.ini et Config/prod.ini (dans cet ordre)
